@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //문제 1 사칙연산
+       /*
+       let a = parseInt(prompt("첫 번째 정수를 입력하시옹"));
+       let b = parseInt(prompt("두 번째 정수를 입력하시옹"));
+
+    
+        
+            if(a >= 1 && b <= 10000) {
+
+       document.write("a + b " + " 는 " , a + b + "<br>" );
+       document.write("a - b " + " 는 " , a - b + "<br>" );
+       document.write("a * b " + " 는 " , a * b + "<br>" );
+       document.write("a / b " + " 는 " , a / b + "<br>" );
+       document.write("a % b " + " 는 " , a % b + "<br>" );
+
+            }
+            else {
+                alert("다시!");
+            }
+            */
+
+            //문제2  !!?
+    
+            let login = prompt("아이디를 입력하세요");
+
+
+            doucument.write(login + "??!");
+    
+
+
+
+        //문제 3        Quadrant n
+        /*
+        let x = parseInt(prompt("X좌표를 설정하세요"));
+      let y = parseInt(prompt("Y좌표를 설정하세요"));
+
+      if((-1000 <= x && x <= 1000) && (-1000 <= y && y <= 1000)) {
+        if(x > 0 && y > 0) {
+          document.write("제 1 사분면입니다");
+        }
+        else if(x < 0 && y > 0) {
+          document.write("제 2 사분면입니다");
+        }
+        else if(x < 0 && y < 0) {
+          document.write("제 3 사분면입니다");
+        }
+        else if(x > 0 && y < 0) {
+          document.write("제 4 사분면입니다");
+        }
+        else {
+          document.write("원점입니다");
+        }
+      }
+      else {
+        document.write("좌표 값이 범위를 벗어났습니다.");
+      }
+
+*/
+
+
+      //문제 4 성적
+      /*
+      let grade;
+      let score = prompt("점수를 입력하세요");
+      score = parseInt(score);
+
+      if(score >=90)
+        grade = "A";
+      else if(score >= 80)
+        grade = "B";
+      else if(score >= 70)
+        grade = "C";
+      else if(score >= 60)
+        grade = "D";
+        else {
+        grade = "F";
+        }
+        document.write(score + "는 " + grade + "입니다.<br>") 
+        */
+
+        //문제5 별 찍기 -1 [안되네]
+/*
+        let n = parseInt(prompt("별의 개수"));
+
+            for(let i = 0; i <= n; i++) {                //개행의 반복문
+                {
+                    document.write("<br>");
+
+                    for(let j = 0; j < i; j++) {         //*의 반복문
+                        document.write("*")
+                    }
+                }
+            }
+*/
+        //문제 6 시그마
+
+      /*  let n = prompt("숫자를 입력하세요." , " ");
+        n = parseInt(n);
+
+        if(1 <= n && n <= 10000) {
+            let sum = 0;                           
+            for(let i = 1 ; i <= n ; i++) {
+            sum += i ;
+        } 
+            document.write(sum)
+            
+        }   else {
+            document.write("ㄴㄴ");
+        }
+    */
+
+
+        /*변수를 초기화하지 않으면, 초기값이 없는 상태에서 값을 누적하기 때문에 원하는 결과를 얻을 수 없습니다. 예를 들어, let sum;으로 변수를 선언하면 초기값이 없으므로, sum += i; 문장이 실행될 때 sum 값은 undefined가 되고, 결과적으로 NaN 값을 반환합니다.
+
+따라서, let sum = 0;으로 변수를 초기화해주어야 합니다. 이렇게 하면, 초기값이 0이 되므로, sum += i; 문장이 처음 실행될 때 sum 값은 0이 되고, 이후 각 숫자를 누적하여 더해줄 수 있습니다.
+        */
+
+        //문제7 별 찍기-2
+/*
+        let n =parseInt(prompt("별의 개수"));
+
+for(let i=0; i<=n; i++)
+{
+     for(let p=0; p<=n-i; p++)
+     {
+         document.write("\u00a0");
+
+     }
+     for(let k = 0; k <= i; k++)
+     {
+         document.write("*");
+     }
+     document.write("<br>");
+
+}
+
+*/
+
+    </script>
+
+</body>
+</html>

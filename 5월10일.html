@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강지민 바보</title>
+
+<!-- <div>새로 생성된 DIV임다.</div> -->
+<h3>라면을 끓이는 순서</h3><hr>
+</head>
+<body>
+    <!-- <div class="plain">plain div</div>
+    <div class="important">important div</div>
+    <div class="plain">plain div</div>
+    <div class="important">important div</div>
+    <div class="plain">plain div</div>
+    <div class="important">important div</div>
+    <div class="plain">plain div</div>
+    <div class="important">important div</div> -->
+
+<ol type="A" style="background-color: yellowgreen;"
+    onclick="add(this)">
+    <li>물을 끓인다.</li>
+    <li>봉지에서 라면을 미리 꺼내 놓는다.</li>
+    
+</ol>
+
+
+    <script>
+        // var divs;
+        // function onload2() {
+        //     divs = document.getElementsByTagName("div");
+        //     for(let i = 0; i < divs.length; i++) {
+                
+        //         if(i % 2 == 1) {
+        //             divs[i].style.color = 'red';
+        //         }
+        //         else {
+        //             divs[i].style.color = 'blue';
+        //         }
+                
+        //     }
+        //     // divs[0].style.color = 'red';
+        //     // divs[1].style.color = 'red';
+        // }
+        // window.addEventListener('load', onload2);
+            
+            // function onclickDIV() {
+            //     //this = onclick 한 대상 DOM 객체
+            //     let p = this.parentElement;
+
+            // }
+    
+            // function createDIV() {
+            //     let obj = document.getElementById("parent");
+            //     let newDIV = document.createElement("div"); //DOM 객체 강제 생성 > 태그를 짓는데 div로 지음
+            //     newDIV.innerHTML = "새로 생성된 DIV입니다."; //innerHTML : 안에 들어가있는 글자
+
+            //      //DOM 객체의 속성(프로퍼티)의 설정(추가)
+            //     newDIV.setAttribute("id", "myDIV"); //이 코드 뭔지 다시..
+            //     newDIV.style.backgroundColor = "yellow";
+            //     // 이렇게해서 div 객체 하나 만들어짐.
+
+            //    //이벤트리스너
+            //     newDIV.onclick = function() {
+            //         let p = this.parentElement; //부모 HTML 태그 요소
+            //         p.removeChild(this);        //자신을 부모로부터 제거
+            //     };
+
+            //     //body => 자식 태그 newDIV(생성한 객체)를 추가 (DOM트리에)
+            //     obj.appendChild(newDIV); //appendchild : 돔트리에 추가한다는 뜻
+
+            // }
+
+                function add(parent) {
+                    let content = prompt("라면을 끓이는 순서를 입력하라.");
+                    let lili = document.createElement("li");
+                    lili.innerHTML = content;
+                    parent.appendChild(lili);
+                }
+            
+
+    </script>
+    
+</body>
+</html>

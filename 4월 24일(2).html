@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="1" onclick="gugudan(1)">
+    <input type="button" value="2" onclick="gugudan(2)">
+    <br>
+    <input type="button" value="num1" onclick="num(1)">
+    <input type="button" value="num2" onclick="num(2)"> 
+    <input type="button" value="num3" onclick="num(3)">
+    <input type="button" value="calc" onclick="calc(4)">
+<br><br><br><br><br>
+    Mouse over here!!
+    <script>
+        function gugudan(n) {
+           // document.write("alert"); /*근데 이러면 문서 전체가 바뀌므로 기존 화면을 살리면서 alert 하려면 밑에처럼 하면 된다. */
+           let str = " "; 
+           for(let i = 1; i < 10; i++)
+           str = n + "*" + i + "=" + (n * i) + "\n" ; //근데 이러면 alert 창이 한번에 안나오고 9번 나온다. 따라서 개행을 넣어준다.
+                alert(n + "*" + i + "=" + (n * i)); //근데 이러면 alert 창이 한번에 안나오고 9번 나온다. 따라서 개행을 넣어준다.
+        }
+
+                var num1 = 0;
+                var num2 = 0;
+                var num3 = 0;
+
+        function num(n) {
+        }
+            /*
+            {
+            if( n == 1 ) {
+                num1 = parseInt(prompt("Insert num1"));
+            }   else if (n == 2); {
+                num2 = parseInt(prompt("Insert num2"));
+            }   else if (n == 3); {
+                num3 = parseInt(prompt("Insert num3"));
+            }
+
+        }
+    }
+*/
+temp = parseInt(prompt("Insert num"));
+
+            switch(n)
+            {
+                case 1 :num1 = temp;
+                break;
+                case 2: num2 = temp;
+                break;
+                case 3 : num3 = temp;
+                break;
+                case 4: //min, max, avg
+                let minTemp = 21000000, maxTemp = -21000000
+                if(num1 > num2) {
+                    maxTemp = num1;
+                    maxTemp = num2;
+                } else{
+                    maxTemp = num2;
+                    minTemp = num1;
+                }
+                if(maxTemp < num3) {
+                    maxTemp = num3;
+                }
+                if(minTemp > num3) {
+                    minTemp = num3;
+                }
+                
+                console.log("min" = "+minTemp+" , max = "+maxTemp+")
+                break;
+            }
+
+            for(let i = 0; i <= n; i++)           //개행의 반복문
+                {
+                    console.log("<br>");
+
+                    for(let j = 0; j < i; j++) {         //*의 반복문
+                        console.log("*");
+                    }
+                }
+            
+            for(let i = 0; i >=n; i--)
+                 {
+                    console.log("*");
+
+                    for(let j = 0; j > i; j--) {
+                        console.log("<br>");
+                    }
+                 }                 
+    </script>
+</body>
+</html>

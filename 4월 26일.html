@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*        
+        let arr = [5, 4, 3, 2, 1];
+        arr[10] = 10;
+        arr['abc'] = 12; //array에 문자도 들어갈 수 있음
+        for(let i = 0; i<arr.length, i++; ) {
+            if(arr[i] != undefined)
+            arr[i] = arr[i]*2;
+            console.log(arr[i]);
+        }
+*/        
+/*
+    let now = new Date()
+    document.write("현재시간: " + now.toUTCString()
+                    + "<br><hr>");
+                    document.write(now.getFullYear() + "년도<br>");
+                    document.write(now.getMonth() + 1 + "월<br>");
+                    document.write(now.getDate() + "일<br>");
+                    document.write(now.getHours() + "시<br>");
+                    document.write(now.getMinutes() + "분<br>");
+                    document.write(now.getSeconds() + "초<br>");
+                    document.write(now.getMilliseconds() + "밀리초<br><hr>");
+    let next = new Date(2023, 5, 22, 0, 0, 0); //7은 8월
+                    document.write("next.toLocaleString() : " + next.toLocaleString() + "<br>");
+                    document.write(parseInt((next - now)/(1000*60*60*24))+"일" +parseInt((next - now)%(1000*60*60*24)/(1000*60*60)) + "시" + parseInt((next - now)%(1000*60*60*24)/(1000*60)));
+*/
+
+/*
+                    let str2 = "a,b,c,d,e,f,g";
+undefined
+let rtv = str2.split(",");
+undefined
+rtv
+(7) ['a', 'b', 'c', 'd', 'e', 'f', 'g']0: "a"1: "b"2: "c"3: "d"4: "e"5: "f"6: "g"length: 7[[Prototype]]: Array(0)
+for(let i = 0; i < rtv.length; i++) {
+    console.log(rtv[i]);
+
+str2.charAt('c');
+
+str2.slice(0, 2);
+str2.slice(0, 5);
+str2.slice(6, 7); //원하는 영역을 자를 수 있음 > slice
+str2.slice(6); //만약 시작만 집어넣으면 시작부터 끝까지 감
+    */
+
+   function randonmInt() {
+    return Math.floor(Math.random()*9) + 1; //원래 random하면0~0.99가 나오는데 *9하고 하니깐 Math.floor 하면 0~8까지가 나온다 =1~9
+   }
+</script>
+<script>
+    //구구단 문제 생성
+    let ques = randomInt() + "*" + randomInt();
+    //사용자로부터 답 입력
+    let user = prompt(ques + "값은 얼마입니까?", 0);    
+</script>
+</body>
+</html>
+
+

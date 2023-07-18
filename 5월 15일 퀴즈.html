@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교수님 죄송합니다</title>
+</head>
+<body id="asdf">
+
+        <div onclick="button">클릭하면 현재 시간으로 업데이트됩니다.</div>
+        <p>현재 시간: <span id="time"></span></p>
+        
+    <script>
+    
+
+        window.onload= function() {
+            let current = new Date();
+        let now = "";                           //""안에 getHours ,,, 넣겠다.
+        now += current.getHours()+ "시";            //+= : 중첩시키겠다
+        now += current.getMinutes()+ "분";
+        now += current.getSeconds()+ "초";
+
+        let newDiv=document.createElement("div");       //우리가 구하려는게 div니깐 div로 요소를 만들겠다
+        newDiv.innerHTML = now;
+
+        let obj = document.getElementById("asdf");
+        newDiv.addEventListener("click", function() {
+
+            let current2 = new Date();
+        let now2 = "";                                  //now2 를 만들어서 덮어씌우겠다
+        now2 += current2.getHours()+ "시";
+        now2 += current2.getMinutes()+ "분";
+        now2 += current2.getSeconds()+ "초";
+        //let newDiv2 = document.createElement("div");
+        newDiv.innerHTML = now2                         //
+
+        })
+        obj.appendChild(newDiv);
+        }
+
+
+    </script>
+</body>
+</html>

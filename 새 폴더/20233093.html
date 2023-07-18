@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('form').submit(function(e) {
+          e.preventDefault();
+          
+          let username = $('#username').val();
+          let email = $('#email').val();
+          let password = $('#password').val();
+          let confirmPassword = $('#confirmPassword').val();
+          
+          $.ajax({
+            type: 'POST',
+            url: '/signup',
+            data: { username, password, confirmPassword },
+            success: function(response) {
+              if (response.success) {
+                alert(response.message);
+                $('form')[0].reset();
+              } else {
+                alert(response.message);
+              }
+            },
+            error: function() {
+              alert('서버에 오류가 발생했습니다.');
+            }
+          });
+        });
+        
+        $('#showUsers').click(function() {
+          $.ajax({
+            type: 'GET',
+            url: '/users',
+            success: function(response) {
+              let users = response.users;
+              let userList = '';
+              
+              if (users.length === 0) {
+                userList = '회원이 없습니다.';
+              } else {
+                userList = users.map(user => user.username).join(', ');
+              }
+              
+              $('#userList').text(userList);
+            },
+            error: function() {
+              alert('서버에 오류가 발생했습니다.');
+            }
+          });
+        });
+      });
+    </script>
+</head>
+<body>
+
+    <h1>회원 가입</h1>
+    <form>
+      <div>
+        <label for="username">사용자 이름:</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div>
+        <label for="Email">이메일:</label>
+        <input type="text" id="Email" name="Email" required>
+      </div>
+      <div>
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div>
+        <label for="confirmPassword">비밀번호 확인:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+      </div>
+      <div>
+        <input type="submit" value="가입">
+      </div>
+    </form>
+    
+    <h2>회원 목록</h2>
+    <button id="showUsers">회원 목록 조회</button>
+    <div id="userList"></div>
+</body>
+</html>
